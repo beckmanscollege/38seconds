@@ -1,0 +1,314 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url("https://cdn.glitch.global/16071efa-1d18-4bbc-b68f-b5bbdc1e76c5/VAGRundschriftBQ.otf?v=1649183508909");
+}
+
+body {
+  background-color: blue;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 150px;
+  color: white;
+  font-family: "MyWebFont", sans-serif;
+  letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+.collapsible {
+  background-color: red;
+  color: yellow;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 20px;
+  bottom: -100px;
+  font-family: "MyWebFont", sans-serif;
+}
+
+.active, .collapsible:hover {
+  background-color: none;
+}
+
+.cont {
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-height: 0;
+  z-index: 10;
+  max-width: 100vw;
+  position: fixed;
+  color: white;
+  bottom: 5%;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  display: flex;
+  text-align: center;
+  font-size: 0.85rem;
+  font-family: "MyWebFont", sans-serif;
+}
+
+ a:link, a:visited, a:hover, a:active {
+   font-weight: bold;
+   text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.time {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 23px;
+  opacity: 0;
+}
+
+.controls {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  z-index: 5;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  animation: rotation 22s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.notisrainbow
+.notishem,
+.notisapple,
+.notisspice,
+.time,
+.controls,
+.back-video {
+  transition: opacity 400ms ease-in-out;
+}
+
+button {
+  z-index: 6;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background: transparent;
+  border-radius: 50%;
+  height: 600px;
+  width: 600px;
+}
+
+#playButton {
+  cursor: pointer;
+  display: block;
+  height: 600px;
+  width: 600px;
+  z-index: 7;
+}
+
+#pauseButton {
+  cursor: pointer;
+  display: none;
+  height: 600px;
+  width: 600px;
+  opacity: 0;
+  z-index: 8;
+}
+
+#logga {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: none;
+  border-radius: 50%;
+  height: 600px;
+  width: 600px;
+  z-index: 0;
+  opacity: 100%;
+}
+
+.back-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  /* opacity: 90%; */
+}
+
+.notisapple {
+  width: 400px;
+  position: fixed;
+  height: auto;
+  right: -700px;
+  top: 20px;
+  z-index: 2;
+  animation-name: moveleft;
+  animation-delay: 31s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveleft {
+  from {
+    right: -700px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+.notishem {
+  width: 400px;
+  position: fixed;
+  height: auto;
+  left: 30px;
+  z-index: 3;
+  bottom: -700px;
+  right: -700px;
+  animation: moveup 2s 22s forwards;
+}
+@keyframes moveup {
+  from {
+    bottom: -700px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+
+.notisspice {
+  width: 450px;
+  position: fixed;
+  height: auto;
+  z-index: 4;
+  bottom: 70px;
+  right: -700px;
+  animation: wiggle 3s ease-in-out infinite, moveleft2 1s 9s forwards;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveleft2 {
+  from {
+    right: -700px;
+  }
+  to {
+    right: 70px;
+  }
+}
+
+.notisrainbow {
+  width: 600px;
+  position: fixed;
+  height: auto;
+  z-index: 3;
+  top: -700px;
+  left: 30px;
+  animation: float2 4s ease-in-out infinite, moveup2 2s 15s forwards;
+}
+@keyframes moveup2 {
+  from {
+    top: -700px;
+  }
+  to {
+    top: 60px;
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+
+body.timer-stop .controls {
+  opacity: 0;
+}
+
+body.timer-stop .notishem {
+  opacity: 0;
+}
+
+body.timer-stop .notisspice {
+  opacity: 0;
+}
+
+body.timer-stop .notisapple {
+  opacity: 0;
+}
+
+body.timer-stop .notisrainbow {
+  opacity: 0;
+}
+
+body.timer-stop .time,
+body.timer-started .back-video {
+  opacity: 1;
+}
