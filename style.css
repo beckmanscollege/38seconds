@@ -14,12 +14,6 @@ body {
   letter-spacing: 3px;
 }
 
-
-
-
-
-
-
 .collapsible {
   background-color: white;
   color: blue;
@@ -33,7 +27,8 @@ body {
   font-family: "MyWebFont", sans-serif;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: none;
 }
 
@@ -52,24 +47,17 @@ body {
   font-size: 0.8vw;
   letter-spacing: 2px;
   text-align: center;
-    left: 27%;
+  left: 27%;
   font-family: "MyWebFont", sans-serif;
 }
 
- a:link, a:visited, a:hover, a:active {
-   text-decoration: none;
-   color: yellow;
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: yellow;
 }
-
-
-
-
-
-
-
-
-
-
 
 .time {
   position: absolute;
@@ -110,8 +98,7 @@ body {
   }
 }
 
-.notisrainbow
-.notishem,
+.notisrainbow .notishem,
 .notisapple,
 .notisspice,
 .time,
@@ -286,7 +273,6 @@ button {
     transform: translatey(0px);
   }
 }
-
 
 body.timer-stop .controls {
   opacity: 0;
